@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Name</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Restaurant Logo"> Restaurant Name
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div id="home" class="hero-section">
+        <img src="img/hero.jpeg" class="img-fluid" alt="Delicious Food">
+        <div class="hero-text">
+            <h1>Welcome to Our Restaurant</h1>
+            <p>Experience the best cuisine in town</p>
+            <a href="#menu" class="btn btn-primary">Order Now</a>
+        </div>
+    </div>
+
+    <!-- Menu Section -->
+    <div id="menu" class="container mt-5">
+        <h2 class="text-center">Our Menu</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/dish1.jpeg" class="card-img-top" alt="Dish 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Rangrasika</h5>
+                        <p class="card-text"> Fresh and colorful bowl of vegetables 🥗🌽🍅.</p>
+                        <p class="card-text"><strong>₹199.99</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/dish2.jpeg" class="card-img-top" alt="Dish 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Subz-e-Shaan</h5>
+                        <p class="card-text">Calling all veggie lovers! Subz-e-Shaan is the ultimate comfort food with a healthy twist.</p>
+                        <p class="card-text"><strong>₹299.99</strong></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more dishes as needed -->
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about" class="container mt-5">
+        <h2 class="text-center">About Us</h2>
+        <p class="text-center">Welcome to Vijayalakshmi’s Fusion Delights where the essence of innovation is presented to the best of culinary fine dining service. Our restaurant is not just a place where our clients come to sit down and eat; it is a place where they come to indulge all the senses and be food Happy. Our key differentiator is the singular focus that we, as a restaurant, have for creating inventive dishes in our kitchen as well as innovative ways in which we serve them. The delicious food we offer, including its presentation, with the freshest locally-sourced products, the elegant setting of the restaurant and all the way down to our wait and kitchen staff, all aim to impress at Vijayalakshmi’s Fusion Delights. However, the thing that makes us stand out is that each of us is inspired by the possibility of developing a warm and genuine relationship with others by being a host. At our restaurant M cuisines, dining is considered as a delightful journey that requires a professional help. From our board of directors Vijayalakshmi, we are pleased to welcome your to Fusion Delights a culinary experience hall marked by food, flavor, fleeting flavors and the fine art of hospitalities.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="container mt-5 mb-5">
+        <h2 class="text-center">Contact Us</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                <div class="invalid-feedback">Please enter your message.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Restaurant Name. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+    font-size: 4em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text p {
+    font-size: 1.5em;
+}
+
+.hero-text .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+/* Menu Section */
+.card {
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+/* About Us Section */
+.container {
+    margin-top: 50px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form .btn {
+    padding: 10px 20px;
+}
+
+form .is-invalid {
+    border-color: #dc3545;
+}
+
+form .invalid-feedback {
+    display: none;
+    color: #dc3545;
+}
+
+form .is-invalid ~ .invalid-feedback {
+    display: block;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+}
+
+/* Scroll-to-Top Button */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #0056b3;
+}
