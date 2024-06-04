@@ -1,6 +1,3 @@
-// scripts.js
-
-// Document Ready
 document.addEventListener('DOMContentLoaded', function() {
     // Add smooth scrolling to all links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -74,4 +71,30 @@ document.addEventListener('DOMContentLoaded', function() {
         const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         return re.test(String(email).toLowerCase());
     }
+
+    // Order functionality
+    var orderButtons = document.querySelectorAll('.order-btn');
+    var orderSummary = document.getElementById('order-summary');
+    var totalPriceElement = document.getElementById('total-price');
+    var totalPrice = 0;
+
+    orderButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var dishName = button.getAttribute('data-dish');
+            var dishPrice = parseFloat(button.getAttribute('data-price'));
+            
+            // Add the dish to the order summary
+            var orderItem = document.createElement('li');
+            orderItem.className = 'list-group-item';
+            orderItem.textContent = `${dishName} - ₹${dishPrice.toFixed(2)}`;
+            orderSummary.appendChild(orderItem);
+            
+            // Update the total price
+            totalPrice += dishPrice;
+            totalPriceElement.textContent = totalPrice.toFixed(2);
+            
+            // Show a confirmation alert
+            alert('You have added ' + dishName + ' to your order!');
+        });
+    });
 });

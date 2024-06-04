@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Name</title>
+    <title>Vijayalakshmi’s Fusion Delights</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -12,7 +12,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
-            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Restaurant Logo"> Restaurant Name
+            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Restaurant Logo"> Vijayalakshmi’s Fusion Delights
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,6 +30,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#orderModal">Order Summary</a>
                 </li>
             </ul>
         </div>
@@ -54,8 +57,9 @@
                     <img src="img/dish1.jpeg" class="card-img-top" alt="Dish 1">
                     <div class="card-body">
                         <h5 class="card-title">Rangrasika</h5>
-                        <p class="card-text"> Fresh and colorful bowl of vegetables 🥗🌽🍅.</p>
+                        <p class="card-text">Fresh and colorful bowl of vegetables 🥗🌽🍅.</p>
                         <p class="card-text"><strong>₹199.99</strong></p>
+                        <button class="btn btn-primary order-btn" data-dish="Rangrasika" data-price="199.99">Order Now</button>
                     </div>
                 </div>
             </div>
@@ -66,6 +70,7 @@
                         <h5 class="card-title">Subz-e-Shaan</h5>
                         <p class="card-text">Calling all veggie lovers! Subz-e-Shaan is the ultimate comfort food with a healthy twist.</p>
                         <p class="card-text"><strong>₹299.99</strong></p>
+                        <button class="btn btn-primary order-btn" data-dish="Subz-e-Shaan" data-price="299.99">Order Now</button>
                     </div>
                 </div>
             </div>
@@ -73,10 +78,34 @@
         </div>
     </div>
 
+    <!-- Order Summary Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Order Summary</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul id="order-summary" class="list-group">
+                        <!-- Order items will be dynamically inserted here -->
+                    </ul>
+                    <p class="mt-3"><strong>Total: ₹<span id="total-price">0</span></strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- About Us Section -->
     <div id="about" class="container mt-5">
         <h2 class="text-center">About Us</h2>
-        <p class="text-center">Welcome to Vijayalakshmi’s Fusion Delights where the essence of innovation is presented to the best of culinary fine dining service. Our restaurant is not just a place where our clients come to sit down and eat; it is a place where they come to indulge all the senses and be food Happy. Our key differentiator is the singular focus that we, as a restaurant, have for creating inventive dishes in our kitchen as well as innovative ways in which we serve them. The delicious food we offer, including its presentation, with the freshest locally-sourced products, the elegant setting of the restaurant and all the way down to our wait and kitchen staff, all aim to impress at Vijayalakshmi’s Fusion Delights. However, the thing that makes us stand out is that each of us is inspired by the possibility of developing a warm and genuine relationship with others by being a host. At our restaurant M cuisines, dining is considered as a delightful journey that requires a professional help. From our board of directors Vijayalakshmi, we are pleased to welcome your to Fusion Delights a culinary experience hall marked by food, flavor, fleeting flavors and the fine art of hospitalities.</p>
+        <p class="text-center">Welcome to Vijayalakshmi’s Fusion Delights where the essence of innovation is presented to the best of culinary fine dining service. Our restaurant is not just a place where our clients come to sit down and eat; it is a place where they come to indulge all the senses and be food happy. Our key differentiator is the singular focus that we, as a restaurant, have for creating inventive dishes in our kitchen as well as innovative ways in which we serve them. The delicious food we offer, including its presentation, with the freshest locally-sourced products, the elegant setting of the restaurant and all the way down to our wait and kitchen staff, all aim to impress at Vijayalakshmi’s Fusion Delights. However, the thing that makes us stand out is that each of us is inspired by the possibility of developing a warm and genuine relationship with others by being a host. At our restaurant, dining is considered a delightful journey that requires professional help. From our board of directors led by Vijayalakshmi, we are pleased to welcome you to Fusion Delights, a culinary experience hallmarked by food, flavor, fleeting flavors, and the fine art of hospitality.</p>
     </div>
 
     <!-- Contact Section -->
@@ -106,7 +135,7 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Restaurant Name. All Rights Reserved.</p>
+        <p>&copy; 2024 Vijayalakshmi’s Fusion Delights. All Rights Reserved.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
